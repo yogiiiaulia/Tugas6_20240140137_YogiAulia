@@ -1,38 +1,24 @@
-body {
-    font-family: Arial, sans-serif;
+body{
+    background-image: url("https://i.pinimg.com/736x/ef/b2/18/efb21890906b66a9f94c096a95dfdb79.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Great Vibes', cursive;
+}
+
+h2{
+    font-family: 'Lobster Two', cursive;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     text-align: center;
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
-    margin: 0;
-    padding: 0;
-}
-
-/* Judul */
-h1 {
-    margin-top: 20px;
-    color: #2c3e50;
-}
-
-/* Deskripsi */
-.description {
-    color: #34495e;
-    margin-bottom: 30px;
-}
-
-/* Styling container media */
-video, iframe, audio, img {
-    display: block;
-    margin: 20px auto;
+    border: 2px solid #5486de;
+    background: #a3dce3;
+    color: #052c3a;
+    box-shadow: 1px 1px 2px #338093;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* Tambahan efek hover biar keren */
-video:hover, iframe:hover, audio:hover, img:hover {
-    transform: scale(1.03);
-    transition: 0.3s;
-}
-
-/* Gambar biar responsif */
-img {
-    max-width: 80%;
+    padding: 3px 10px;
+    cursor: pointer;
 }

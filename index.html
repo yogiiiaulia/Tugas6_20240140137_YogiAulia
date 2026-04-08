@@ -1,97 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Web</title>
-
+    <title>gallery windut</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Style warning -->
-    <style>
-        .warning {
-            width: 60%;
-            margin: 15px auto;
-            padding: 12px;
-            background-color: #fff3cd;
-            color: #856404;
-            border: 1px solid #ffeeba;
-            border-radius: 8px;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            opacity: 0;
-            transition: 0.3s;
-        }
-
-        .warning.show {
-            opacity: 1;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Send+Flowers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
 </head>
+
 <body>
+    <center>
+        <h1>Gallery windut</h1>
 
-    <!-- Judul Website -->
-    <h1>Gallery windut</h1>
-    <p class="description">
-        Website ini menampilkan berbagai media windut seperti video, audio, dan gambar.
-    </p>
+        <ul>
+            <!-- VIDEO -->
+            <li>
+                <h2>FULL WINDUT</h2>
+                <hr>
+                <video id="video" controls width="300" height="500" loop autoplay muted preload="auto">
+                    <source src="assets/video/vid.mp4" type="video/mp4">
+                </video>
+            </li>
 
-    <!-- Video Lokal -->
-    <video 
-    width="640"
-    height="360"
-    controls autoplay
-    onclick="toggleText('videoText')"
-    src="assets/video/vid.mp4">
-    </video>
+            <!-- AUDIO -->
+            <li>
+                <h2>bagoyang</h2>
+                <hr>
+                <audio id="audio" controls>
+                    <source src="assets/audio/SOASU.mp3.mpeg" type="audio/mpeg">
+                </audio>
+            </li>
 
-    <p id="videoText" class="warning" style="display: none;">
-        ⚠️ Deskripsi: Ini adalah video lokal.
-    </p>
+            <!-- GAMBAR -->
+            <li>
+                <h2>Gambar Responsive</h2>
+                <hr>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="https://static.republika.co.id/uploads/member/images/news/qemy4nbo38.jpg">
+                    <source media="(max-width: 1200px)" srcset="https://th.bing.com/th/id/OIP.UPy5_03M-OhNQPXWkK17ugHaE7?w=251&h=180&c=7&r=0&o=5&pid=1.7">
+                    <img id="gambar" src="assets/images/halo.jpg" alt="pic 1" style="width: auto;">
+                </picture>
+            </li>
+        </ul>
+    </center>
 
-    <!-- Video YouTube -->
-    <div id="video-yt" onclick="toggleText('ytText')">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/P9zd4VhcPQ8?si=YW0nGayyNxUWlnq_" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <p id="ytText" class="warning" style="display: none;">
-        ⚠️ Deskripsi: Ini adalah video dari YouTube.
-    </p>
-
-    <!-- Audio -->
-    <div id="audio" onclick="toggleText('audioText')">
-        <audio controls>
-            <source src="assets/audio/SOASU.mp3.mpeg" type="audio/mpeg">
-        </audio>
-    </div>
-
-    <p id="audioText" class="warning" style="display: none;">
-        ⚠️ Deskripsi: Ini adalah file audio.
-    </p>
-
-    <!-- Gambar -->
-    <div id="image">
-        <img src="assets/images/halo.jpg" alt="poster" onclick="toggleText('imageText')">
-    </div>
-
-    <p id="imageText" class="warning" style="display: none;">
-        ⚠️ Deskripsi: Ini adalah gambar.
-    </p>
-
-    <!-- JavaScript -->
-    <script>
-        function toggleText(id) {
-            var text = document.getElementById(id);
-
-            if (text.style.display === "none") {
-                text.style.display = "block";
-                setTimeout(() => text.classList.add("show"), 10);
-            } else {
-                text.classList.remove("show");
-                setTimeout(() => text.style.display = "none", 300);
-            }
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
